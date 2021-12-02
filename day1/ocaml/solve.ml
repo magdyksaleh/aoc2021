@@ -3,8 +3,10 @@ let rec map func l =
       [] -> []
    | h::t -> func h :: map func t
 
+
 let entry_of_channel ch =
    let number = input_line ch in int_of_string number
+
 
 let rec list_of_channel ch =
    try
@@ -20,6 +22,7 @@ let list_of_file filename =
          close_in ch;
          distance_list
 
+
 let number_of_increase l =
    let rec inner count prev l =
       match l with 
@@ -28,6 +31,7 @@ let number_of_increase l =
       | [] -> count
    in
    inner 0 infinity l
+
 
 let number_of_triple_increase l =
    let rec inner count seen prev1 prev2 prev3 l = 
